@@ -8,7 +8,7 @@ module.exports = (req, res)=>{
 	const idDestino = {_id   : req.params.idDestino};
 	const valor     = {valor : req.body.valor};
 
-	VerificarSaldo(idOrigem, valor.valor, res);
+	VerificarSaldo(idOrigem, valor.valor, res).then(sucesso).catch(error);
 
 	// const Origem = {
 	// 	valor : valor.valor
