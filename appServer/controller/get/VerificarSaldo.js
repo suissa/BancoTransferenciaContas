@@ -9,7 +9,7 @@ function testarValor(idOrigem, valor, res) {
 		if(valor >= data.valor) return res.json({message: "valor indisponivel"});
 		res.json(data.valor);
 	}
-	Conta.findById(idOrigem, Exibir).exec(sucesso).catch(erro);
+	return Conta.findById(idOrigem, Exibir).exec();
 }
 
 module.exports = testarValor;
